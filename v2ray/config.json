@@ -1,4 +1,9 @@
 {
+  "log": {
+    "error": "",
+    "loglevel": "info",
+    "access": ""
+  },
   "inbounds": [
     {
       "listen": "0.0.0.0",
@@ -126,7 +131,12 @@
         },
         {
           "type": "field",
-          "ip": [],
+          "ip": [
+            "254.254.254.254"
+          ],
+          "domain": [
+            "whitehouse.gov"
+          ],
           "outboundTag": "block"
         }
       ]
