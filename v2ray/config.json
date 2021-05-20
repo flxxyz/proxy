@@ -1,4 +1,9 @@
 {
+  "log": {
+    "error": "",
+    "loglevel": "info",
+    "access": ""
+  },
   "inbounds": [
     {
       "listen": "0.0.0.0",
@@ -49,7 +54,7 @@
                 "alterId": 0,
                 "id": "你的授权ID",
                 "level": 0,
-                "security": "aes-128-cfb"
+                "security": "auto"
               }
             ]
           }
@@ -72,13 +77,57 @@
     },
     {
       "protocol": "blackhole",
-      "settings": {},
+      "settings": {
+        "response": {
+          "type": "none"
+        }
+      },
       "tag": "block"
     },
     {
       "protocol": "freedom",
-      "settings": {},
+      "settings": {
+        "domainStrategy": "UseIP",
+        "redirect": "",
+        "userLevel": 0
+      },
       "tag": "direct"
     }
-  ]
+  ],
+  "dns": {
+    "dns": {
+      "servers": []
+    }
+  },
+  "routing": {
+    "settings": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "type": "field",
+          "outboundTag": "proxy",
+          "domain": [
+            "githubusercontent.com"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "domain": [
+            "localhost",
+            "geosite:cn"
+          ]
+        },
+        {
+          "type": "field",
+          "ip": [
+            "geoip:private",
+            "geoip:cn"
+          ],
+          "outboundTag": "direct"
+        }
+      ]
+    }
+  },
+  "transport": {}
 }
