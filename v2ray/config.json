@@ -1,9 +1,4 @@
 {
-  "log": {
-    "error": "",
-    "loglevel": "info",
-    "access": ""
-  },
   "inbounds": [
     {
       "listen": "0.0.0.0",
@@ -96,7 +91,10 @@
   ],
   "dns": {
     "dns": {
-      "servers": []
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
     }
   },
   "routing": {
@@ -125,6 +123,11 @@
             "geoip:cn"
           ],
           "outboundTag": "direct"
+        },
+        {
+          "type": "field",
+          "ip": [],
+          "outboundTag": "block"
         }
       ]
     }
