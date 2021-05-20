@@ -119,15 +119,11 @@
           "domain": [
             "localhost",
             "geosite:cn"
-          ]
-        },
-        {
-          "type": "field",
+          ],
           "ip": [
             "geoip:private",
             "geoip:cn"
-          ],
-          "outboundTag": "direct"
+          ]
         },
         {
           "type": "field",
