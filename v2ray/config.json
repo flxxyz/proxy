@@ -97,7 +97,7 @@
   "dns": {
     "dns": {
       "servers": [
-        "1.1.1.1",
+        "114.114.114.114",
         "8.8.8.8"
       ]
     }
@@ -110,15 +110,52 @@
           "type": "field",
           "outboundTag": "proxy",
           "domain": [
-            "githubusercontent.com"
+            "geosite:github",
+            "geosite:docker",
+            "geosite:google",
+            "geosite:twitter",
+            "geosite:microsoft",
+            "geosite:facebook",
+            "geosite:telegram",
+            "geosite:steam",
+            "geosite:disqus",
+            "geosite:niconico",
+            "geosite:nintendo",
+            "geosite:amazon",
+            "geosite:android",
+            "domain:gitlab.com",
+            "domain:bintray.com",
+            "domain:brew.sh",
+            "domain:twitch.tv",
+            "domain:pinterest.com",
+            "domain:amazonaws.com",
+            "domain:medium.com",
+            "domain:vimeo.com",
+            "domain:archive.org",
+            "domain:line.me",
+            "domain:mega.nz",
+            "domain:pixiv.net",
+            "domain:moegirl.org",
+            "domain:shadowsocks.org",
+            "domain:torproject.org",
+            "domain:akamai.net",
+            "domain:v2ray.com",
+            "domain:v2fly.org"
           ]
         },
         {
           "type": "field",
           "outboundTag": "direct",
           "domain": [
-            "localhost",
-            "geosite:cn"
+            "geosite:cn",
+            "geosite:private",
+            "geosite:apple",
+            "geosite:aliyun",
+            "geosite:sina",
+            "geosite:bytedance",
+            "geosite:douyu",
+            "geosite:bilibili",
+            "geosite:biliplus"
           ],
           "ip": [
             "geoip:private",
@@ -127,11 +164,13 @@
         },
         {
           "type": "field",
-          "ip": [
-            "254.254.254.254"
-          ],
           "domain": [
-            "whitehouse.gov"
+            "geosite:category-ads",
+            "geosite:alibaba-ads",
+            "geosite:sina-ads",
+            "geosite:bytedance-ads",
+            "geosite:amazon-ads",
+            "geosite:apple-ads"
           ],
           "outboundTag": "block"
         }
